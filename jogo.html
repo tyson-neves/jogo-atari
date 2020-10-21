@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Javascript Básico</title>
+</head>
+<body>
+    <canvas id="folha" width="600" height="500">
+
+    </canvas>
+
+    <script>
+        var folhaDesenho = document.getElementById("folha");
+        var areaDesenho = folhaDesenho.getContext("2d");
+
+        var larguraCampo = 600;
+        var alturaCampo = 500;
+        var larguraLinha = 5;
+        var larguraBola = 7;
+        var alturaRaquete = 50;
+
+        areaDesenho.fillStyle = "#001A14";
+        areaDesenho.fillRect(0, 0, larguraCampo, alturaCampo);
+
+        areaDesenho.fillStyle = "#ffffff"
+
+        // Linha
+        areaDesenho.fillRect(larguraCampo/2 - larguraLinha/2, 0, larguraLinha, alturaCampo);
+
+        // Raquete 1
+        areaDesenho.fillRect(0, 200, larguraLinha, alturaRaquete);
+
+        // Raquete 2
+        areaDesenho.fillRect(larguraCampo - larguraLinha, 200, larguraLinha, alturaRaquete);
+
+        // bola quadrada
+        areaDesenho.fillRect(15, 230, larguraBola, larguraBola,);
+
+
+    </script>
+</body>
+</html>
